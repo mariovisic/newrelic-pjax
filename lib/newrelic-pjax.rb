@@ -1,7 +1,2 @@
-require "newrelic-pjax/version"
-
-module Newrelic
-  module Pjax
-    # Your code goes here...
-  end
-end
+require 'newrelic-pjax/version'
+require 'newrelic-pjax/agent/monitoring'
