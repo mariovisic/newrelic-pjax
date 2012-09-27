@@ -1,4 +1,4 @@
-# Newrelic::Pjax
+# Newrelic::PJAX
 
 Adds additional helper methods to the newrelic_rpm gem to allow instrumentation of PJAX requests
 

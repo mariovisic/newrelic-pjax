@@ -5,7 +5,7 @@ require 'newrelic-pjax/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "newrelic-pjax"
-  gem.version       = Newrelic::Pjax::VERSION
+  gem.version       = NewRelic::PJAX::VERSION
   gem.authors       = ["Mario Visic"]
   gem.email         = ["mario@mariovisic.com"]
   gem.description   = %q{Instrument PJAX requests for New Relic RPM}
