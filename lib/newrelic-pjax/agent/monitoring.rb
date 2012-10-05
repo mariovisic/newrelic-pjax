@@ -4,6 +4,7 @@ module NewRelic
   module PJAX
     module Agent
       module Monitoring
+        include NewRelic::Agent::BrowserMonitoring
         def pjax_timing_start
           unless NewRelic::Agent.instance.beacon_configuration.nil? || !NewRelic::Agent.is_transaction_traced? || !NewRelic::Agent.is_execution_traced? || NewRelic::Agent::TransactionInfo.get.ignore_end_user?
             %{<script type="text/javascript">
