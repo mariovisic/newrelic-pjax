@@ -44,7 +44,8 @@ Next create a PJAX layout like so:
 
 ```
 
-Lastly in your applications JavaScript you will need to fire off timing information to newrelic once the PJAX request is complete. Here in the example below i'm using the [jquery.waitForImages JavaScript library](https://github.com/alexanderdickson/waitForImages) to calculate front end rendering time by timing how long the images take to render on the page.
+Lastly in your applications JavaScript you will need to fire off timing information to newrelic once the PJAX request is complete. Here in the example below i'm using the [jquery.waitForImages JavaScript library](https://github.com/alexanderdickson/waitForImages) to calculate front end rendering time by timing how long the images take to render on the page.  
+
 You can find the jquery.waitForImages library here [https://github.com/alexanderdickson/waitForImages](https://github.com/alexanderdickson/waitForImages)
 
 ```coffee
