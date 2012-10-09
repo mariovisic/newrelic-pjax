@@ -35,7 +35,7 @@ end
 
 Next create a PJAX layout like so:
 
-```ruby
+```
 # app/views/layouts/pjax.html.erb
 
 <%= NewRelic::Agent.pjax_timing_start %>
@@ -56,7 +56,6 @@ You can find the jquery.waitForImages library here [https://github.com/alexander
 #= require jquery.waitforimages
 
 $ ->
-
   $(document).on 'pjax:start', (xhr) ->
     window.pjaxTiming = {'navigationStart': new Date().getTime() }
 
