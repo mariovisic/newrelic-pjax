@@ -18,8 +18,9 @@ module NewRelic
           config = NewRelic::Agent.instance.beacon_configuration
 
           if config.nil? ||
-            !config.rum_enabled ||
-            config.browser_monitoring_key.nil? ||
+            !config.enabled? ||
+            NewRelic::Agent.config[:browser_key].nil? ||
+            NewRelic::Agent.config[:browser_key].empty? ||
             !NewRelic::Agent.is_transaction_traced? ||
             !NewRelic::Agent.is_execution_traced? ||
             NewRelic::Agent::TransactionInfo.get.ignore_end_user?
