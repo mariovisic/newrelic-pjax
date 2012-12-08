@@ -33,6 +33,22 @@ class ApplicationController < ActionController::Base
 end
 ```
 
+Otherwise if you are using something like `rack-pjax` you can inject the code in your rack layer like this
+
+```ruby
+class NewRelicRackPjax < Rack::Pjax
+  def call(env)
+    response = super(env)
+    if pjax? env
+      body = response[2][0]
+      body = "%s%s%s" % [NewRelic::Agent.pjax_timing_start, body, NewRelic::Agent.pjax_timing_end]
+      response[2] = [body]
+    end
+    response
+  end
+end
+```
+
 Next create a PJAX layout like so:
 
 ```
